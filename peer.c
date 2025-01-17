@@ -155,5 +155,9 @@ int main(int argc, const char **argv) {
   vec_destroy(peers);
   fclose(hosts_fd);
 
+  // Piazza said the program can't terminate 🤷‍♀️
+  while (1)
+    ;
+
   return 0;
 }

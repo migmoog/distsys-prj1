@@ -1,0 +1,21 @@
+The peer system algorithm functions like so:
+
+1. Process flags for specified files
+ - check for error in passing the flags and making sure
+ the file exists
+
+2. Open the hostsfile and parse into string vector (svec_t in svec.c)
+
+3. print names of peers for sureness sake
+
+4. open socket and bind it for the process to listen to its peers
+
+5. sleep() for 5 seconds to allow other processes on the network to begin
+
+6. surf through list of peers and open corresponding sockets to send "I am alive" messages
+
+7. once sent, listen for said messages
+
+8. after recvfrom() blocks conclude, print "READY" to stderr
+
+9. cleanup allocated addrinfo's, and close all opened file descriptors
