@@ -114,6 +114,7 @@ int main(int argc, const char **argv) {
     perror("bind");
     return 6;
   }
+  sleep(5); // might be a lil hacky but eh
 
   // sending "I am alive"s
   struct {
@@ -134,6 +135,7 @@ int main(int argc, const char **argv) {
     }
   }
 
+  // listening for "I am alive"s
   int msgc = 0;
   for (; msgc < peers->len; msgc++) {
     int pstatus;
