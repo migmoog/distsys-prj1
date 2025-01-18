@@ -1,0 +1,4 @@
+Jeremy Gordon
+
+To run the program, just run `make`.
+The program has error codes within peer.c that sequentially increase depending on what part of the program fails
